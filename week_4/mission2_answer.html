@@ -1,45 +1,50 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>mission2</title>
-</head>
-<body>
-<div>
-    <h5>👉 문장 전체를 대문자로 변경해 주세요</h5>
-    <span id="change-one">change capital</span>
-</div>
-<hr />
-<div>
-    <h5>👉 모든 'c' -> 'C'(대문자)로 변경해 주세요</h5>
-    <span id="change-two">change capital</span>
-</div>
-<hr />
-<div>
-    <h5>👉 문장을 거꾸로 변경해 주세요</h5>
-    <span id="change-three">change capital</span>
-</div>
-<script>
-    /*  문장 전체를 대문자로 변경해 주세요 */
-    var changeOne = document.getElementById('change-one');
-    changeOne.innerText = changeOne.textContent.toUpperCase();
+  </head>
+  <body>
+    <div>
+      <h5>👉 문장 전체를 대문자로 변경해 주세요</h5>
+      <span id="change-one">change capital</span>
+    </div>
+    <hr />
+    <div>
+      <h5>👉 모든 'c' -> 'C'(대문자)로 변경해 주세요</h5>
+      <span id="change-two">change capital</span>
+    </div>
+    <hr />
+    <div>
+      <h5>👉 문장을 거꾸로 변경해 주세요</h5>
+      <span id="change-three">change capital</span>
+    </div>
+    <script>
+      /*  문장 전체를 대문자로 변경해 주세요 */
+      var changeOne = document.getElementById('change-one');
+      changeOne.innerText = changeOne.textContent.toUpperCase();
 
-    /*  모든 'c' -> 'C'(대문자)로 변경해 주세요 */
-    var changeTwo = document.getElementById('change-two');
-    changeTwo.innerText = changeTwo.textContent.replace('c', 'C').replace('c', 'C');
+      /*  모든 'c' -> 'C'(대문자)로 변경해 주세요 */
+      var changeTwo = document.getElementById('change-two');
+      changeTwo.innerText = changeTwo.textContent
+        .replace('c', 'C')
+        .replace('c', 'C');
 
-    // https://caniuse.com/?search=replaceAll
-    // changeTwo.innerText = changeTwo.textContent.replaceAll('c', 'C');
+      // https://caniuse.com/?search=replaceAll
+      // changeTwo.innerText = changeTwo.textContent.replaceAll('c', 'C');
 
-    // 추가(option): 정규표현식
-    // changeTwo.innerText = changeTwo.textContent.replace(/c/g, 'C');
+      // 추가(option): 정규표현식
+      // changeTwo.innerText = changeTwo.textContent.replace(/c/g, 'C');
 
-    /* 문장을 거꾸로 변경해 주세요 */
-    var changeThree = document.getElementById('change-three');
-    // https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String/split
-    changeThree.innerText = changeThree.textContent.split('').reverse().join('');
-</script>
-</body>
+      /* 문장을 거꾸로 변경해 주세요 */
+      var changeThree = document.getElementById('change-three');
+      // https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String/split
+      changeThree.innerText = changeThree.textContent
+        .split('')
+        .reverse()
+        .join('');
+    </script>
+  </body>
 </html>
