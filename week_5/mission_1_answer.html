@@ -30,7 +30,7 @@
 
       var launchBtn = document.getElementById('launch-btn');
       launchBtn.addEventListener('click', function () {
-        var randomNum = Math.floor(Math.random() * (launch.length - 1));
+        var randomNum = Math.floor(Math.random() * launch.length);
         console.log('오늘의 점심 메뉴는? ', launch[randomNum]);
       });
     </script>
